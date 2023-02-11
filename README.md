@@ -1,7 +1,3 @@
-# Archived
-No further updates to the repository will be made at this time. Please see the _forks_ for any possible solutions to your specific use case and/or the 
-author-suggested repo at: https://github.com/chuckcharlie/cups-avahi-airprint.
-
 # <a name="toc"></a> Table of Contents
 * [About](#about)
 * [Intro](#intro)
@@ -21,7 +17,7 @@ author-suggested repo at: https://github.com/chuckcharlie/cups-avahi-airprint.
 
 # <a name="about"></a> [About](#toc)
 Modified copy of source code at:
-https://github.com/quadportnick/docker-cups-airprint
+https://github.com/RagingTiger/cups-airprint
 
 # <a name="intro"></a> [Intro](#toc)
 This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint
@@ -58,9 +54,9 @@ docker run \
        -v /var/run/dbus:/var/run/dbus \
        --device /dev/bus \
        --device /dev/usb \
-       -e CUPSADMIN="admin" \
-       -e CUPSPASSWORD="password" \
-       ghcr.io/ragingtiger/cups-airprint:master
+       -e CUPSADMIN=admin \
+       -e CUPSPASSWORD=password \
+       dzikus99/cups-airprint
 ```
 To stop the container simply run:
 ```
@@ -97,9 +93,9 @@ docker create \
        -v ~/airprint_data/services:/services \
        --device /dev/bus \
        --device /dev/usb \
-       -e CUPSADMIN="admin" \
-       -e CUPSPASSWORD="password" \
-       ghcr.io/ragingtiger/cups-airprint:master
+       -e CUPSADMIN=admin \
+       -e CUPSPASSWORD=password \
+       dzikus99/cups-airprint
 ```
 Follow this with `docker start` and your cups/airprint printer is running:
 ```

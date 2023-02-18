@@ -3,8 +3,6 @@ FROM ubuntu:lunar
 LABEL maintainer="Grzegorz Sterniczuk <docker@sternicz.uk>"
 LABEL org.opencontainers.image.source https://github.com/dzikus/cups-airprint
 
-#  && apt-get install -y --no-install-recommends --force-yes \
-#  && apt-get install -y --force-yes \
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -y \
   && apt-get dist-upgrade -y \

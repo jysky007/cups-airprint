@@ -17,4 +17,7 @@ fi
 cp /config/printers.conf /etc/cups/printers.conf
 
 /root/printer-update.sh &
+service dbus start
+service avahi-daemon start
+
 exec /usr/sbin/cupsd -f
